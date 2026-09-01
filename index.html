@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#315735" />
+    <meta name="description" content="A tiny apple garden for a house of original characters." />
+    <link rel="stylesheet" href="/src/style.css" />
+    <title>apple tree house · OC garden</title>
+  </head>
+  <body>
+    <div class="paper-grain"></div>
+    <main class="site-shell">
+      <header class="topbar">
+        <a class="brand" href="#about" aria-label="Apple Tree House home">
+          <span class="brand-mark">✦</span>
+          <span><b>apple tree</b><small>oc garden house</small></span>
+        </a>
+        <div class="topbar-right">
+          <span class="status-dot"></span><span class="tiny-note" data-i18n="online">สวนกำลังผลิบาน</span>
+          <span class="divider"></span>
+          <span class="clock" id="clock">10:23 pm</span>
+        </div>
+      </header>
+
+      <section class="welcome-row">
+        <div class="avatar blank-avatar" aria-label="profile picture placeholder">
+          <span>♡</span><small>profile pic<br>coming soon</small>
+        </div>
+        <div class="speech-bubble">
+          <span class="bubble-spark">✿</span>
+          <div><p class="eyebrow">welcome to my little corner</p><h1 data-i18n="welcome">ยินดีต้อนรับสู่บ้านต้นแอปเปิ้ล</h1><p class="subtitle" data-i18n="welcomeSub">พื้นที่เล็ก ๆ สำหรับฉันและเด็ก ๆ ของเรา</p></div>
+        </div>
+      </section>
+
+      <nav class="main-nav" aria-label="main navigation">
+        <button class="nav-tab pink active" data-page="about"><span>⌂</span><b data-i18n="aboutTab">about</b><small>แนะนำตัว</small></button>
+        <button class="nav-tab green" data-page="characters"><span>♧</span><b data-i18n="charactersTab">characters</b><small>เด็ก ๆ ในบ้าน</small></button>
+        <button class="nav-tab yellow" data-page="gallery"><span>✧</span><b data-i18n="galleryTab">gallery</b><small>อัลบั้มรูป</small></button>
+      </nav>
+
+      <div class="content-frame">
+        <section class="page active" id="page-about">
+          <div class="section-title"><span>✿</span><div><h2 data-i18n="aboutTitle">about me</h2><p>little owner of this apple tree</p></div><span>✿</span></div>
+          <div class="about-grid">
+            <aside class="profile-column">
+              <div class="portrait-card">
+                <div class="portrait blank-portrait"><span>☼</span><p>your picture<br>will grow here</p></div>
+                <div class="sticker">♡<br><small>hello!</small></div>
+              </div>
+              <div class="mini-note"><span>☘</span><p data-i18n="ownerNote">เป็นมุมเล็ก ๆ ที่เก็บเรื่องราวของโอซีและ AU ที่รัก</p></div>
+            </aside>
+            <article class="intro-card">
+              <div class="name-line"><h3>green apple keeper</h3><span>she / her</span></div>
+              <p class="big-intro" data-content="intro">สวัสดีค่ะ ยินดีต้อนรับเข้าสู่สวนเล็ก ๆ ของเรา ♡</p>
+              <p data-content="introEn">Hi! Welcome to our tiny apple garden. This is a cozy place for my OCs, their worlds, and little stories.</p>
+              <div class="info-list">
+                <p><i>✿</i><b>about me / เกี่ยวกับฉัน</b><span data-i18n="later">i'll add it later / จะมาเติมทีหลัง</span></p>
+                <p><i>♡</i><b>status / สถานะ</b><span>growing softly · ค่อย ๆ เติบโต</span></p>
+                <p><i>☼</i><b>home / บ้าน</b><span>apple tree house · บ้านต้นแอปเปิ้ล</span></p>
+              </div>
+              <div class="dashed-line"></div>
+              <div class="tiny-links"><span>✦ open for daydreams</span><span>✦ 3 little apples inside</span></div>
+            </article>
+          </div>
+          <div class="garden-callout"><span class="leaf-icon">♧</span><p><b data-i18n="gardenTitle">meet the little apples</b><br><span data-i18n="gardenSub">เด็ก ๆ ทั้งสามคนในบ้านของเรา รอให้คุณแวะมาทำความรู้จัก</span></p><button class="text-button" data-go="characters">see all →</button></div>
+        </section>
+
+        <section class="page" id="page-characters">
+          <div class="section-title"><span>✿</span><div><h2>the little apples</h2><p>our OC garden · บ้านของโอซี</p></div><span>✿</span></div>
+          <div class="characters-intro"><span class="leaf-chip">3 apples</span><p>เลือกเด็ก ๆ สักคนเพื่ออ่านเรื่องราวเบื้องต้น หรือแวะดู AU ที่กำลังเติบโตของแต่ละคน</p></div>
+          <div class="character-grid" id="characterGrid"></div>
+        </section>
+
+        <section class="page" id="page-gallery">
+          <div class="section-title"><span>✿</span><div><h2>garden gallery</h2><p>little snapshots · รูปในสวน</p></div><span>✿</span></div>
+          <div class="gallery-toolbar"><p>some borrowed faces while the real references are still growing ♡</p><span class="gallery-count" id="galleryCount">03 photos</span></div>
+          <div class="gallery-grid" id="galleryGrid"></div>
+        </section>
+      </div>
+
+      <footer class="footer">
+        <div class="footer-links"><button class="footer-pill">links</button><a href="#" aria-label="twitter">♥</a><a href="#" aria-label="social">◎</a><a href="#" aria-label="mail">✉</a><a href="#" aria-label="discord">☁</a></div>
+        <div class="footer-actions"><button id="languageToggle" class="language-button">TH / EN</button><button id="adminButton" class="admin-button">⌘ owner login</button></div>
+        <small>made with apples &amp; daydreams · <span id="year"></span></small>
+      </footer>
+    </main>
+
+    <div class="modal-backdrop" id="loginModal" hidden>
+      <div class="modal login-modal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+        <button class="close-modal" data-close="loginModal">×</button>
+        <div class="modal-icon">♧</div><p class="eyebrow">private garden gate</p><h2 id="loginTitle">owner login</h2><p class="modal-sub">เข้าไปดูแลข้อมูลในสวนของคุณ</p>
+        <form id="loginForm"><label>email<input name="email" type="email" autocomplete="email" placeholder="you@example.com" required /></label><label>password<input name="password" type="password" autocomplete="current-password" placeholder="••••••••" required /></label><button class="primary-button" type="submit">unlock the garden →</button><p class="form-message" id="loginMessage"></p></form>
+        <p class="demo-hint">demo mode: <b>admin@example.com</b> / <b>appletree</b></p>
+      </div>
+    </div>
+
+    <div class="modal-backdrop" id="adminModal" hidden>
+      <div class="modal admin-modal" role="dialog" aria-modal="true" aria-labelledby="adminTitle">
+        <button class="close-modal" data-close="adminModal">×</button>
+        <div class="admin-heading"><div><p class="eyebrow">welcome back, keeper</p><h2 id="adminTitle">garden desk</h2></div><span class="leaf-seal">✦</span></div>
+        <p class="modal-sub">แก้ไขข้อความหน้า About ได้ทันที · changes are saved in this browser</p>
+        <form id="contentForm"><label>intro (TH)<textarea name="intro" rows="2"></textarea></label><label>intro (EN)<textarea name="introEn" rows="2"></textarea></label><div class="admin-actions"><button class="secondary-button" type="button" id="resetContent">reset demo</button><button class="primary-button" type="submit">save changes ♡</button></div><p class="form-message" id="saveMessage"></p></form>
+        <div class="admin-divider"></div><div class="add-gallery-heading"><p class="eyebrow">new little snapshot</p><span>✧ add to gallery</span></div>
+        <form id="galleryForm" class="gallery-form"><label>image URL<input name="image" type="url" placeholder="https://…/your-image.jpg" required /></label><div class="gallery-form-row"><label>caption<input name="label" placeholder="a new apple day" required /></label><label>sub-caption<input name="sub" placeholder="little note" /></label></div><label>color<select name="color"><option value="yellow">soft yellow</option><option value="red">apple red</option><option value="purple">berry purple</option></select></label><button class="secondary-button" type="submit">add photo ♡</button><p class="form-message" id="galleryMessage"></p></form>
+        <div class="admin-divider"></div><p class="admin-footnote">รูปตัวละครสามารถเปลี่ยนได้ใน <code>public/</code> หรือผ่าน storage/database ที่เชื่อมกับ API</p><button class="logout-button" id="logoutButton">log out</button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
